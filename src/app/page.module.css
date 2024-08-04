@@ -1,0 +1,96 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  min-height: 100vh;
+  background-color: #fafafa;
+  /* Background color for light mode */
+}
+
+.description {
+  font-size: 1rem;
+  max-width: 800px;
+  width: 100%;
+  text-align: center;
+}
+
+.description p {
+  margin: 1rem 0;
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.card {
+  padding: 1rem;
+  border-radius: 8px;
+  background: white;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  transition: background 200ms, border 200ms;
+}
+
+.card span {
+  display: inline-block;
+  transition: transform 200ms;
+}
+
+.card h2 {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.card p {
+  margin: 0;
+  opacity: 0.7;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 0;
+}
+
+.center::before,
+.center::after {
+  content: "";
+  position: absolute;
+  filter: blur(45px);
+  transform: translateZ(0);
+}
+
+.center::before {
+  background: rgba(0, 0, 0, 0.1);
+  width: 480px;
+  height: 360px;
+  margin-left: -400px;
+}
+
+.center::after {
+  background: rgba(0, 0, 0, 0.2);
+  width: 240px;
+  height: 180px;
+  z-index: -1;
+}
+
+@media (max-width: 700px) {
+  .main {
+    padding: 2rem;
+  }
+
+  .card {
+    padding: 1rem;
+  }
+
+  .center {
+    padding: 4rem 0;
+  }
+
+  .description p {
+    font-size: 0.8rem;
+  }
+}
